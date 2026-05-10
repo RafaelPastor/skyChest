@@ -23,6 +23,9 @@ jobs:
           java-version: '21'
           cache: maven
 
+      - name: Permission Maven Wrapper
+        run: chmod +x mvnw
+
       - name: Build Maven
         run: ./mvnw clean package -DskipTests
 
